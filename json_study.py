@@ -34,7 +34,7 @@ def test_3():
 
 def test_4():
     """
-    dict 转字符串
+    dict（含中文）转字节串
 
     有字典：d = {u"name": u"绿盟"}
     期望将字典转为字符串：u'''{"name": "绿盟"}'''
@@ -44,11 +44,16 @@ def test_4():
     用 json.dumps(d, ensure_ascii=False)，得到：u'''{{"name": "绿盟"}}'''
     """
     d = {u"name": u"绿盟"}
-    # ensure_ascii=False 时，返回 unicode 字符串
-    d = json.dumps(d, ensure_ascii=False).encode('utf8')
-    print type(d)
-    print d
 
+    # ensure_ascii=False 时，dumps 返回 unicode 字符串
+    d1 = json.dumps(d, ensure_ascii=False).encode('utf8')
+    print type(d1)
+    print d1
+
+    d2 = str(d)
+    print type(d2)
+    print d2
+    print d2[5], d2[6]
 
 if __name__ == '__main__':
     test_4()

@@ -11,5 +11,7 @@ def test_0():
     try:
         n = int("abc")
     # 【易错点】except 这里和 python3 写法不同
+    # python2 中写 Exception, err
+    # python3 中写 Exception as err
     except Exception, err:
         print(err)

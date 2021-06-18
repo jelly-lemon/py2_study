@@ -10,7 +10,7 @@ def test_1():
     if s.find(u"code") != -1:
         print "yes"
 
-
+def test_2():
 
 
 

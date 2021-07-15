@@ -11,7 +11,15 @@ def test_1():
         print "yes"
 
 def test_2():
+    """
+    在 python2 中，str 就是 python3 中的 byte
+    unicode 就是 python3 中的 str
+    """
+    b = "你好"
+    print type(b)
 
+    s = b.decode("utf-8")
+    print type(s)
 
 
 def test_3():

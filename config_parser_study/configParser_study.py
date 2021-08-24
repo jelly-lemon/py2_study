@@ -60,7 +60,7 @@ def test_1():
     print conf.has_section("hello")
 
     # 写入文件
-    with open("./jit.ini", "w+") as f:
+    with open("jit.ini", "w+") as f:
         conf.write(f)
 
 
